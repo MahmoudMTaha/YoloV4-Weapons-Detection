@@ -4,14 +4,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/MahmoudMTaha/YoloV4-Weapons-Detection">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">YoloV4 weapons Detection</h3>
 
   <p align="center">
-    project_description
+    <h5>automatic weapon detection software using a convolutional neural network (CNN) based on pre-trained You Only Look Once (YOLO) model.</h5>
+    <h5> The software detect three types of weapons : knives, pistols and rifles </h5>
+    <h5> deployed locally using Flask  </h5>
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
