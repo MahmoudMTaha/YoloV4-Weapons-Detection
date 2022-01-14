@@ -1,0 +1,270 @@
+<!HomePage html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Weapon detection</title>
+	    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+	    <link rel="stylesheet" href="/static/css/templatemo-style.css">
+	</head>
+	<style>
+		h1 
+		{
+		  text-align: center;
+		}
+		
+		.button 
+		{
+		  color: rgb(255, 255, 255);
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 0 auto;
+		  display:block;
+		  cursor: pointer;
+		  font-weight: bold;
+	      border-radius: 6px;
+		}
+		body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.section {
+  padding: 55px;
+  text-align: center;
+  background-color: #3399CC;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+		.button2:hover {
+	  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 15px 48px 0 rgba(0,0,0,0.19);
+	}
+		
+	</style>
+	<body>
+		    <!-- Page Loader -->
+	    <div id="loader-wrapper">
+	        <div id="loader"></div>
+
+	        <div class="loader-section section-left"></div>
+	        <div class="loader-section section-right"></div>
+		</div>
+		<nav class="navbar navbar-expand-lg">
+		    <div class="container-fluid" style="max-width: 100%">
+		        <a class="navbar-brand">
+		                weapons Detection 
+		        </a>
+		        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+		                <li class="nav-item">
+		                	<form action="home" >
+		                    	<button class="nav-link nav-link-1 button2" style="background-color: white;border: 0">Home</button>
+		                    </form>
+		                </li>
+		                <li class="nav-item">
+		                    <form action="submitVideo" method="POST" >
+		                        <button class="nav-link nav-link-1 button2" style="background-color: white;border: 0">Videos</button>
+		                    </form>
+		                </li>
+		                <li class="nav-item">
+		                    <form action="stream_options" method="POST" >
+		                        <button class="nav-link nav-link-1 button2" style="background-color: white;border: 0">Live Stream</button>
+		                    </form>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+
+		<div class="section">
+		  <h1>Welcome To Weapon Detection System</h1>
+		  <h2>ITI AI PRO Intake 1 Graduation Project </h2>
+		  <h6 style="color: white"><br>Artificial intelligence AI software system to spread safety and security through real-time detection of weapons such as: knives, pistols and rifles.<br> Our Vision is to make the best use of AI to make earth a better and safer place to live, in turns our mission is to save lives, reduce crimes and spread safety and security.</h6>
+		  <h4 style="text-align: left;">Software Features</h4>
+		  <h5 style="text-align: left;">
+			- Detect Weapons using videos<br>
+			- Detect Weapons using surveillance cameras<br>
+			- Send Alert mails with the detected weapon to an authorized person<br>
+		  </h5>
+		</div>
+		<div class="section" style="background-color: white">
+			<div>
+				<h4 style="text-align: center;color: #009999;margin: 25px">To use Email feature please enter a valid Email Address of the Authorized person </h4>
+			</div>
+			<div class="tm-hero d-flex justify-content-center align-items-center" style="min-height:70px;">
+				<form class="d-flex position-absolute tm-search-form" id="email_id">
+					<input class="form-control" type="email" name="email" id="email" size="30" required placeholder="Please Enter receiver Email Address">
+		            <button class="btn tm-search-btn btn-info" style="color: white" type="submit">
+		            	Enter
+		            </button>
+		        </form>
+	    	</div>
+	    	<div>
+				<h3 style="text-align: center;color: #009999;padding-top:25px;margin: 25px"> Select input mode to Start detecting weapons </h3>
+			</div>
+			<div class="container">
+				<div class="row justify-content-around">
+				    <div class="col-5">
+				      <form  action="submitVideo" method="POST" >
+							  <button class="btn tm-search-btn btn-info button2" style="width: 100%; color: white ;" type="submit">Use Video</button>
+							</form>
+				    </div>
+				    <div class="col-5">
+				      <form action="stream_options" method="POST" >
+							  <button class="btn tm-search-btn btn-info button2" style="width: 100%; color: white;"  type="submit">Use Live Stream</button>
+							</form>
+				    </div>
+				  </div>			
+			</div>
+		</div>
+<!-- 		<h2 style="text-align:center">Our Team</h2>
+		<div class="row">
+		  <div class="column">
+		    <div class="card">
+		      <img src={{url_for('static', filename= 'reham.jpg')}} alt="Reham" style="width:100%">
+		      <div class="container">
+		        <h2>Reham ElTagoury</h2>
+		        <p class="title">CEO & Founder</p>
+		        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+		        <p>jane@example.com</p>
+		        <p><button class="button">Contact</button></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="column">
+		    <div class="card">
+		      <img src={{url_for('static', filename= 'Nayrouz.jpg')}} alt="Nayroz" style="width:100%">
+		      <div class="container">
+		        <h2>Nayrouz Al Gammal</h2>
+		        <p class="title">CEO & Founder</p>
+		        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+		        <p>jane@example.com</p>
+		        <p><button class="button">Contact</button></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="column">
+		    <div class="card">
+		      <img src={{url_for('static', filename= 'Wssam.jpg')}} alt="Wessam" style="width:100%">
+		      <div class="container">
+		        <h2> Wssam Hassan</h2>
+		        <p class="title">CEO & Founder</p>
+		        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+		        <p>jane@example.com</p>
+		        <p><button class="button">Contact</button></p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="column">
+		    <div class="card">
+		      <img src={{url_for('static', filename= 'magdy1.jpg')}} alt="Magdy" style="width:100%">
+		      <div class="container">
+		        <h2>Ahmed Magdy</h2>
+		        <p class="title">Art Director</p>
+		        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+		        <p>mike@example.com</p>
+		        <p><button class="button">Contact</button></p>
+		      </div>
+		    </div>
+		  </div>
+		  
+		  <div class="column">
+		    <div class="card">
+		      <img src={{url_for('static', filename= 'taha1.jpg')}} alt="Taha" style="width:100%">
+		      <div class="container">
+		        <h2>Mahmoud Taha</h2>
+		        <p class="title">Software Team</p>
+		        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+		        <p>mahmoudtaha613@gmail.com</p>
+		        <p><button class="button">Contact</button></p>
+		      </div>
+		    </div>
+		  </div>
+		</div> -->
+		<script src="/static/js/plugins.js"></script>
+	    <script>
+	        $(window).on("load", function() {
+	            $('body').addClass('loaded');
+	        });
+	    </script>
+	    <script type="text/javascript">
+		    $(document).on('submit','#email_id',function(e)
+		                   {
+		      e.preventDefault();
+		      $.ajax({
+		        type:'POST',
+		        url:'/',
+		        data:{
+		          email:$("#email").val()
+		        },
+		        success:function()
+		        {
+					document.getElementById('email').value=''
+		        	alert('Email address updated');
+		        }
+		      })
+		    });
+		</script>
+
+	</body>
+</html>

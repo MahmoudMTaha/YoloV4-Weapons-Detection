@@ -1,0 +1,10 @@
+^C:\USERS\20111\DESKTOP\DARKNET-MASTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/20111/Desktop/darknet-master -BC:/Users/20111/Desktop/darknet-master --check-stamp-file C:/Users/20111/Desktop/darknet-master/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

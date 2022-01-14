@@ -1,0 +1,47 @@
+<!SubmitVideo html>
+<html>
+<head>
+	<title>Submit Video</title>
+</head>
+
+<style>
+    h1 
+	{
+	  text-align: center;
+	}
+	
+	 input[type=file], input[type=submit]	{
+	  color: rgb(255, 255, 255);
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 0 auto;
+	  display:block;
+	  cursor: pointer;
+	  font-weight: bold;
+      border-radius: 6px;
+	  background-color: #38605d;
+	  padding: 15px 50px;
+	  position: relative; 
+	  top:50%;
+	}
+
+	/* .button1 {background-color: #38605d;padding: 15px 126px; position: relative; top: 50%;}	 */
+</style> 
+
+<body style="background-color:rgb(233, 233, 233);">
+	<br>
+	<br>
+	
+    <h1 style="text-align:center">Submit Your Video</h1>
+	<br>
+	<br>
+	
+	<form action="predictVideo" method="POST" enctype="multipart/form-data">
+		<input type="file"  style="margin: 0 auto;display:block;" accept="video/*" name="vid"><br>
+		<input type="submit" style="margin: 0 auto;display:block;" name="btn">
+	</form>
+		
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!HomePage html>
+<html>
+<head>
+<title>Home</title>
+</head>
+<style>
+	h1 
+	{
+	  text-align: center;
+	}
+	
+	.button 
+	{
+	  color: rgb(255, 255, 255);
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 0 auto;
+	  display:block;
+	  cursor: pointer;
+	  font-weight: bold;
+      border-radius: 6px;
+	}
+
+	.button1 {background-color: #38605d;padding: 15px 126px; position: relative; top: 50%;}
+	.button2 {background-color: #394675;padding: 15px 100px; position: relative; top: 50%;} 
+	
+</style>
+<body style="background-color:rgb(233, 233, 233);">
+	<br>
+	<br>
+	
+	<h1 style="text-align:center">Welcome To Weapon Detection System</h1>
+	
+	<br>
+	<br>	
+		
+	<form action="submitVideo" method="POST" >
+	  <button class="button button1" type="submit">Use Video</button>
+	</form>
+	
+	<br>
+	
+	<form action="getStream" method="POST" >
+	  <button class="button button2" type="submit">Use Live Stream</button>
+	</form>
+
+</body>
+</html>

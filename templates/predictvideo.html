@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapon detection</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/templatemo-style.css">
+<!--
+    
+TemplateMo 556 Catalog-Z
+
+https://templatemo.com/tm-556-catalog-z
+
+-->
+    <style>
+        h1 
+        {
+          text-align: center;
+        }
+        
+        .button 
+        {
+          color: rgb(255, 255, 255);
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 0 auto;
+          display:block;
+          cursor: pointer;
+          font-weight: bold;
+          border-radius: 6px;
+        }
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.section {
+  padding: 55px;
+  text-align: center;
+  background-color: #3399CC;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+        .button2:hover {
+      box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 15px 48px 0 rgba(0,0,0,0.19);
+    }
+        
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" style="max-width: 100%">
+            <a class="navbar-brand">
+                weapons Detection 
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                	<form action="home">
+                    	<button class="nav-link nav-link-1 button2" style="background-color: white;border: 0">Home</button>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <form action="submitVideo" method="POST" >
+                        <button class="nav-link nav-link-1 button2" style="background-color: white;border: 0">Videos</button>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <form action="stream_options" method="POST" >
+                        <button class="nav-link nav-link-1 button2" style="background-color: white;border: 0">Live Stream</button>
+                    </form>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tm-hero d-flex justify-content-center align-items-center">
+        <img src={{url_for('static', filename= 'input_img.jpg')}}> 
+        <h1 class="d-flex position-absolute" style="text-align: center;color: #3399CC;"> Results</h1>
+    </div>
+
+        <div class="section" style="background-color: white">
+            <div style="--bs-gutter-x: 1.5rem;
+    width: 100%;
+    /* padding-right: calc(var(--bs-gutter-x)/ 2); */
+    /* padding-left: calc(var(--bs-gutter-x)/ 2); */
+    margin-right: auto;
+    margin-left: auto;">
+                <div class="row justify-content-around">
+                    <div class="col-5">
+                        <div class="justify-content-center align-items-center">
+                            <h3  style="text-align: center;color: #009999;"> Before</h3>
+							<video  width="640" height="420" controls muted autoplay>
+								<source src="{{soucre}}" type="video/mp4">
+							</video>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                    	<div class="justify-content-center align-items-center">
+                            <h3  style="text-align: center;color: #009999;"> After</h3>
+							<video width="640" height="420" controls muted autoplay>
+								<source src="{{result}}" type="video/mp4">
+							</video>
+						</div>
+                    </div>
+                  </div>            
+            </div>
+        </div>
+    <script src="/static/js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+        
+        $('button').click(function() {
+            $('body').removeClass('loaded');
+        });
+
+
+    </script>
+</body>
+
+</html>

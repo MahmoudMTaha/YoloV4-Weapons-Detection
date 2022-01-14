@@ -1,0 +1,70 @@
+<!PredictVideo html>
+<html>
+<head>
+<title>Predict Video</title>
+</head>
+
+<style>
+	h1 
+	{
+	  text-align: center;
+	}
+	
+	.button 
+	{
+	  color: rgb(255, 255, 255);
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 0 auto;
+	  cursor: pointer;
+	  font-weight: bold;
+      border-radius: 6px;
+	}
+
+	.button1 {background-color: #38605d;padding: 15px 94px; position: relative; top: 50%;}
+	.button2 {background-color: #394675;padding: 15px 100px; position: relative; top: 50%;}
+	.button3 {background-color: #000000;padding: 15px 100px; position: relative; top: 50%;} 
+	
+	
+</style>
+<body style="background-color:rgb(233, 233, 233);">
+	<br>
+	
+	<h1 style="text-align:center">Weapon Detection System Result</h1>
+	
+		
+	
+	<button class="button button1" type="button" style='margin-left: 200px'>Before</button>
+	<button class="button button2" type="button" style='margin-left: 400px'>After</button>
+	
+	<br>
+	<br>	
+
+	<video width="660" height="350" controls muted autoplay>
+		<source src="{{soucre}}" type="video/mp4">
+	</video>
+
+	<video width="660" height="350" controls muted autoplay>
+		<source src="{{result}}" type="video/mp4">
+	</video>
+
+	<br><br>
+	
+	<form action="home" >
+		  <button class="button button3" style="float: right;margin-right:23px" type="submit">Home</button>
+	</form>
+	<script src="/static/js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+        window.onload = function() {
+            $('body').addClass('loaded');
+        }
+
+    </script>
+
+</body>
+</html>
