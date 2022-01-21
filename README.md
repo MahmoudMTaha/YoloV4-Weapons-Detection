@@ -15,14 +15,11 @@
     <h5> The software detect three types of weapons : knives, pistols and rifles </h5>
     <h5> deployed locally using Flask  </h5>
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://drive.google.com/file/d/1TrwTL-a7DqVCJxuAkmjCt1IDG5c_JLHN/view?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://www.youtube.com/watch?v=zmNJViugLeo">View Demo</a>
+
   </p>
 </div>
 
@@ -44,12 +41,9 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
-    </li>
+<!--     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Contact</a></li> -->
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -61,7 +55,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://youtu.be/zmNJViugLeo)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+The first and supreme goal of science is to serve man-kind, and since the 
+security and safety of man-kind is one of the first and most important 
+priorities, we worked on “Weapon Dectection Sysyem” depending on artificial 
+intelligence and deep learning technologies can detect weapons such as: 
+pistols, knifes and rifles then sending alert mails with the detected weapon 
+for the authorized department such as: police department, security man, ... 
+etc.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -80,39 +80,48 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
+To be able to run the system you have to install the following Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Windows
+* Github (Desktop/Bash)
+* [OpenCV](https://opencv.org/releases/)
+* [Visual Studio community 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community)
+* [CMake GUI: Windows win64-x64](https://cmake.org/download/)
+* [Cuda](https://developer.nvidia.com/cuda-downloads)
+* [cuDNN](https://developer.nvidia.com/cudnn)
+
+* Darknet
   ```sh
-  npm install npm@latest -g
+  git clone https://github.com/AlexeyAB/darknet
+  ```
+* [FFmpeg](https://www.ffmpeg.org/)
+* Flask
+   ```sh
+  pip install Flask
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/MahmoudMTaha/YoloV4-Weapons-Detection.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+2. Install Darknet [Tutorial](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81) in a new folder "darknet-master"
+3. delete "data" and "cfg" folders from darknet-master
+4. copy "data" and "cfg" folders from the cloned darknet folder to "darknet-master"
+5. rename darknet.py in "darknet-master" to darknet2.py
+6. copy "yolov4-custom_best.weights" from the cloned darknet folder to "darknet-master"
+7. delete the cloned darknet folder
+8. rename "darknet-master" to darknet and move it to the project folder
+9. edit Yolo_Test_and_Deployment.ipynb by putting sender email and password
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- USAGE EXAMPLES
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -121,9 +130,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+ -->
 
-
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
 - [] Feature 1
@@ -135,9 +144,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+ -->
 
-
-<!-- CONTRIBUTING -->
+<!-- CONTRIBUTING
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -152,35 +161,27 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+ -->
 
 
-
-<!-- LICENSE -->
+<!-- LICENSE
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+ -->
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* []()
-* []()
-* []()
+This is The Graduation Project of the Information Technology institute [ITI](https://www.iti.gov.eg/iti/hom) AI program Powered by EPITA
+### Team
+* Ahmed Magdy - [@Linkedin](https://www.linkedin.com/in/ahmedmagdy9696/)
+* Reham ElTagoury - [@Linkedin](https://www.linkedin.com/in/reham-eltagoury-496804167/) 
+* Nayrouz Al-Gamaal - [@Linkedin](https://www.linkedin.com/in/nayrouz-al-gamaal-29156b167/) 
+* Mahmoud Taha - [@Linkedin](https://www.linkedin.com/in/mahmoud-taha/) - Mahmoudtaha613@gmail.com
+* Wssam Hassan - [@Linkedin](https://www.linkedin.com/in/wssam-hassan/) 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
