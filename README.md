@@ -113,7 +113,7 @@ To be able to run the system you have to install the following Prerequisites
 3. delete "data" and "cfg" folders from darknet-master
 4. copy "data" and "cfg" folders from the cloned darknet folder to "darknet-master"
 5. rename darknet.py in "darknet-master" to darknet2.py
-6. copy "yolov4-custom_best.weights" from the cloned darknet folder to "darknet-master"
+6. download "yolov4-custom_best.weights" from [here](https://drive.google.com/file/d/1OgKUDww4xx6RSuPBEyDfm6BNSEHCbg6Y/view?usp=sharing) into "darknet-master"
 7. delete the cloned darknet folder
 8. rename "darknet-master" to darknet and move it to the project folder
 9. edit Yolo_Test_and_Deployment.ipynb by putting sender email and password
