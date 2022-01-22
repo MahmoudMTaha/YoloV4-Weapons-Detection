@@ -15,7 +15,7 @@
     <h5> The software detect three types of weapons : knives, pistols and rifles </h5>
     <h5> deployed locally using Flask  </h5>
     <br />
-    <a href="https://drive.google.com/file/d/1TrwTL-a7DqVCJxuAkmjCt1IDG5c_JLHN/view?usp=sharing"><strong>Explore the docs »</strong></a>
+    <a href="https://drive.google.com/file/d/1CYIMsAbpBP6Iarb5dfW6WRrd5LpnhPfp/view?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.youtube.com/watch?v=zmNJViugLeo">View Demo</a>
